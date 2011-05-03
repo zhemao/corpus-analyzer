@@ -7,4 +7,4 @@ and the blog to tumblr. But there is no where for the Corpus Analyser to go.
 Therefore, I am putting a standalone version of it here on github. The
 only dependency is web.py.
 
-Type `python start.py` or just `./start.py` to run the application. 
+Type python start.py or just ./start.py to run the application. 

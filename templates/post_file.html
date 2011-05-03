@@ -1,0 +1,17 @@
+{% extends "corpus_base.html" %}
+
+{% block title %} Upload File {% endblock %}
+
+{% block header %}
+<h1>Upload File</h1>
+{% endblock %}
+
+{% block body %}
+<p>Please upload the writing you wish to analyze. The file should be a plain text 
+file ending with the extension <q>.txt</q> and should be encoded in UTF-8 format.</p>
+
+<form enctype="multipart/form-data" action="#" method="post" id="upload_form">
+<p><input type="file" name="text"/></p>
+<p><input type="submit" value="Submit"></p>
+</form>
+{% endblock %}

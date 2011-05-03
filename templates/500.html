@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Internal Server Error{% endblock %}
+
+{% block init %}
+<link rel="stylesheet" type="text/css" href="/static/css/base.css"/>
+{% endblock %}
+
+{% block header %}
+<h1 id="header">Zhehao Mao's Personal Website</h1>
+{% endblock %}
+
+{% block body %}
+  <div id="main">
+    <h2>Whoops!</h2>
+    <p>Something went wrong with the server. Please email zhehao.mao@gmail.com 
+       with details about when this error occured and what page you were trying
+       to reach</p>
+  </div>
+{% endblock %}
+

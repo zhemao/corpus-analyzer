@@ -1,0 +1,17 @@
+#sidebar {
+  float:left;
+  width:140px;
+  min-height:500px;
+  background-color:#0000ff;
+  padding-right:10px;
+  padding-left:10px;
+}
+#sidebar li{
+  padding: 5px;
+}
+#sidebar a:link {
+  color:#0f0;
+}
+#sidebar a:visited {
+  color:#00ff00;
+}

@@ -1,0 +1,9 @@
+body{
+  background-image:url('/static/images/parchment.jpg');
+}
+h1{
+  font-size:36px;
+}
+footer{
+  margin-top: 100px;
+}

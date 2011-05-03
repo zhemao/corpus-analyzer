@@ -1,0 +1,29 @@
+{% extends "corpus_base.html" %}
+
+{% block title %}
+Personal Corpus Analyzer
+{% endblock %}
+
+{% block header %}
+<img src="/static/images/corpus-header-text.png" alt="header text"/>
+{% endblock %}
+
+{% block body %}
+<p>
+The first thing you may ask when first viewing this website is, "What is a corpus?" In linguistics, a corpus is a body of text in a specific language that is analyzed to identify trends and features in that language. Most corpora used in academia are very large and encompass a wide variety of writings written by many different people. This website does something different. It allows you to analyze your personal corpus. 
+</p>
+<p>
+The inspiration for this website came from my final assignment in my University Writing class. For this assignment, we were asked to write an introspective essay on our own writing. The instructions were deliberately vague, and only asked that we be creative and that we use examples of our own writing as sources. Being a computer engineering major, I chose to analyze my own writing in a computational manner. I wrote a set of python scripts that parsed and counted unique words in my writing. I then compared the results of this analysis to the word frequencies in the British National Corpus and the American National Corpus. 
+</p>
+<p>
+In his comments on my essay, my instructor expressed an interest in conducting a similar analysis on his own writing. I decided then, that it would be a good idea to build a web application around the scripts I wrote, and this site was the result. 
+</p>
+<p>
+Finally, a note on privacy. This site will not store any personal information on you, not your name, not your email address, not anything. We don't even ask you to sign up for an account or login. The analysis is conducted completely anonymously. We also do not permanently store the original text that you upload. 
+</p>
+<p><strong>What are you waiting for?</strong> <a href="upload/">Let's get started.</a></p>
+{% endblock %}
+
+{% block footer %}
+<p>This website is dedicated to my University Writing professor, Garrett McDonough, who taught us challenge our assumptions and embrace uncertainty in our writing&mdash;something that I failed at again and again. I have, however, learned how to use an em-dash properly.</p>
+{% endblock %}

@@ -1,0 +1,21 @@
+#box{
+  width:325px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #7ef;
+  margin-top: 100px;
+}
+
+form {
+  padding: 10px;
+  background-color: #07f;
+}
+
+h1 {
+  margin: 10px;
+  padding: 5px;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+}
+

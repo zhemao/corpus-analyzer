@@ -1,0 +1,54 @@
+{% extends "corpus_base.html" %}
+
+{% block title %} Results {% endblock %}
+
+{% block init %}
+{{super()}}
+<script type="text/javascript">
+<!--
+function popup_comparison(form){
+	url = '../compare/?word='+form.word.value
+	win = window.open(url, 'Comparison', 'width=400,height=300');
+	win.focus();
+	return false;
+}
+-->
+</script>
+<style type="text/css">
+table, tr, th, td{
+	border: 1px solid black;
+}
+</style>
+{% endblock %}
+
+{% block header %}<h1>Your Results</h1>{% endblock %}
+
+{% block body %}
+
+<p>Here are the results from analyzing your writing. The table below holds the 100 most frequently used words in your writing that are over two letters long, sorted by frequency in descending order.</p>
+
+<p>See how you compare to the British and American National Corpora. Type a word you want to compare into the input field and press submit.</p>
+
+<form action="../compare/" method="get" onsubmit="return popup_comparison(this);">
+<p><input type="text" name="word"/></p>
+<p><input type="submit" value="Submit"></p>
+</form>
+
+<p>Total Word Count: {{total}}</p>
+
+<table id="results">
+<tr><th>Word</th><th>Count</th><th>Frequency</th><th>Word</th><th>Count</th><th>Frequency</th></tr>
+{% for row in results %}
+<tr>
+{% for col in row %}<td>{{col}}</td>{% endfor %}
+</tr>
+{% endfor %}
+</table>
+
+<p>If you clear your stored browser data, you will no longer be able to see this results page. If you want to keep a record of the results of this analysis, you can <a href="{{csvpath}}">download the full results</a> in a CSV (comma-separated values) format spreadsheet.</p>
+
+<p><a href="../upload/">Start Again</a></p>
+<p><a href="..">Back to Corpus Home.</a></p>
+
+{% endblock %}
+

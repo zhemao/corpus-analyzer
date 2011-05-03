@@ -1,0 +1,18 @@
+{% extends "corpus_base.html" %}
+
+{% block title %} How You Compare {% endblock %}
+
+{% block header %}<h1>How You Compare</h1>{% endblock %}
+
+{% block body %}
+<p>This is how your use of the word <q>{{word}}</q> compares to its use in the American and British National Corpora.</p>
+
+<table>
+<tr><th>Corpus</th><th>Count</th><th>Frequency</th></tr>
+{% for row in table %}
+<tr>
+{% for col in row %}<td>{{col}}</td>{% endfor %}
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

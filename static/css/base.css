@@ -1,0 +1,27 @@
+h1 {
+  font-size:36px;
+}
+h2 {
+  font-size:18px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+#main {
+  padding:10px;
+  background-color: inherit;
+}
+
+#header{
+  background-color:#0000cc;
+  padding: 10px;
+}
+
+#container{
+  margin-left: 30px;
+  margin-right: 30px;
+  background-color: #fff;
+}
+
+body{
+  background-color: #ddd;
+}

@@ -1,0 +1,19 @@
+body{
+	background-color:#fff;
+}
+
+.block{
+	margin:5px;
+	background-color:#9bddff;
+	padding:5px;
+}
+
+h2{
+	font-size:24px;
+	font-style:bold;
+	margin:0px;
+}
+
+.info{
+	font-style:italic;
+}

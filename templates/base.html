@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>{% block title %}Title{% endblock %}</title>
+{% block init %}<!--something-->{% endblock %}
+</head>
+<body>
+<div id="container">
+<div id="header">
+{% block header %}{% endblock %}
+</div>
+{% block body %}{% endblock %}
+<footer>
+{% block footer %}{% endblock %}
+</footer>
+</div>
+</body>
+</html>

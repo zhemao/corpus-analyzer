@@ -1,0 +1,38 @@
+body{
+  background-color:#037;
+}
+
+#container{
+  margin-left:20px;
+  margin-right:20px;
+  padding: 10px;
+  background-color:#fff;
+}
+
+.block{
+  background-color:#ddd;
+  padding: 10px;
+  margin: 20px 10px;
+}
+
+.blog_title{
+  font-weight:bold;
+  font-size:24px;
+  margin-right:100px;
+}
+
+.date{
+  font-size: 0.9em;
+  color: #999;
+}
+
+img{
+  max-width:500px;
+  max-height:500px;
+}
+
+.maintext{
+  margin: 5px;
+  padding: 5px 10px;
+  background-color: #eee;
+}

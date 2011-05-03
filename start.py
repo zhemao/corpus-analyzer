@@ -35,7 +35,7 @@ class Upload:
 	def GET(self):
 		if 'test' not in session:
 			raise web.seeother('/nocookie/')
-		return render_template('post_file.html')
+		return render.post_file()
 	def POST(self):
 		textfile = web.input(text={}).text
 		if textfile.type == 'text/plain' and textfile.filename[-3:]=='txt':

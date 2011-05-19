@@ -33,7 +33,7 @@ class Index:
 
 class Upload:
 	def GET(self):
-		if 'test' not in session:
+		if session.get('test')!='testcookie':
 			raise web.seeother('/nocookie/')
 		return render.post_file()
 	def POST(self):
@@ -45,7 +45,7 @@ class Upload:
 
 class Results:
 	def GET(self):
-		if "data" not in session:
+		if not session.get('data'):
 			raise web.seeother('/')
 		rdr = csv.reader(open(STATIC_PATH+session['data'], 'r'))
 		results = []
@@ -57,7 +57,7 @@ class Results:
 			elif rdr.line_num>51: results[rdr.line_num-52]+=row
 			else: results.append(row)
 		return render.results(total=total,results=results,
-				      csvpath=STATIC_URL+session['data'])
+							csvpath=STATIC_URL+session['data'])
 	
 class Nocookie:
 	def GET(self):
@@ -69,7 +69,7 @@ class Error:
 
 class Compare:
 	def GET(self):
-		if 'word' not in web.input():
+		if not web.input().get('word'):
 			err_mess = '<html><head><title>No Input Value</title></head>'
 			err_mess+='<body>You must provide the word to be searched.</body></html>'
 			return err_mess
@@ -80,7 +80,7 @@ class Compare:
 			count, relfreq = corpus.find_word(word)
 			tup = (corpus.fullname, count, '%1.4f%%' % (relfreq*100))
 			table.append(tup)
-		if 'data' in session:
+		if session.get('data'):
 			f = open(STATIC_PATH+session['data'])
 			count, relfreq = search_user_corpus(f, word)
 			tup = ("Your Writing", count, '%1.4f%%' % (relfreq*100))
@@ -90,7 +90,7 @@ class Compare:
 class API:
 	def GET(self):
 		web.header('Content-type','application/json')
-		if 'q' not in web.input():
+		if not web.input().get('q'):
 			return json.dumps({'ok':False, 'mess':'no query given'})
 		try:
 			q = json.loads(web.input().q)

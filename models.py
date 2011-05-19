@@ -1,5 +1,5 @@
 from __future__ import division
-#from settings import REDIS as conn
+from settings import STATIC_PATH
 import csv
 
 fullnames = {'anc':'American National Corpus', 'bnc': 'British National Corpus'}
@@ -16,7 +16,7 @@ class Corpus(object):
 		fullname = fullnames[abbrev]
 		words = {}
 		total = 0
-		with open('/var/www/main/static/files/corpora/'+abbrev+'-count-o5.csv') as f:
+		with open(STATIC_PATH+'files/corpora/'+abbrev+'-count-o5.csv') as f:
 			rdr = csv.reader(f)
 			for word, count in rdr:
 				count = int(count)

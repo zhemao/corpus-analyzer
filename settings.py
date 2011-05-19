@@ -1,5 +1,5 @@
 import jinja2 as jj2
-from snakelegs.connection import connect
+#from snakelegs.connection import connect
 import sys
 import web
 import os
